@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+  <style>
+    label { display: block; margin-top: 0.5em; }
+    input, select { width: 300px; }
+    .file-input { width: auto; }
+    button { margin-top: 1em; padding: 0.5em 1em; }
+  </style>
+</head>
+<body>
+  <h1>Add Employee (Subadmin #2)</h1>
+  <form id="addEmployeeForm" enctype="multipart/form-data" method="post"
+        action="https://api.managifyhr.com/api/subadmin/add-employee/2">
+    <label>First Name <input type="text" name="firstName" required></label>
+    <label>Last Name  <input type="text" name="lastName" required></label>
+    <label>Email      <input type="email" name="email" required></label>
+    <label>Phone      <input type="tel" name="phone" required></label>
+    <label>Aadhar No  <input type="text" name="aadharNo" required></label>
+    <label>PAN Card   <input type="text" name="panCard" required></label>
+    <label>Education  <input type="text" name="education" required></label>
+    <label>Blood Group
+      <select name="bloodGroup" required>
+        <option value="">— select —</option>
+        <option>O+</option>
+        <option>O−</option>
+        <option>A+</option>
+        <option>A−</option>
+        <option>B+</option>
+        <option>B−</option>
+        <option>AB+</option>
+        <option>AB−</option>
+      </select>
+    </label>
+    <label>Job Role   <input type="text" name="jobRole" required></label>
+    <label>Gender     <select name="gender" required>
+        <option value="">— select —</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Address    <input type="text" name="address" required></label>
+    <label>Birth Date <input type="date" name="birthDate" required></label>
+    <label>Joining    <input type="date" name="joiningDate" required></label>
+    <label>Status     <input type="text" name="status" required></label>
+    <label>Bank Name        <input type="text" name="bankName" required></label>
+    <label>Account Number   <input type="text" name="bankAccountNo" required></label>
+    <label>IFSC Code        <input type="text" name="bankIfscCode" required></label>
+    <label>Branch Name      <input type="text" name="branchName" required></label>
+    <label>Salary           <input type="number" name="salary" required></label>
+    <label>Department       <input type="text" name="department" required></label>
+
+    <label class="file-input">Employee Image  <input type="file" name="empimg"></label>
+    <label class="file-input">Aadhar Image    <input type="file" name="adharimg"></label>
+    <label class="file-input">PAN Image       <input type="file" name="panimg"></label>
+
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
